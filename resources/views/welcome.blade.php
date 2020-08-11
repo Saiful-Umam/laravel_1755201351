@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    YOGIH PRAYOGA
                 </div>
 
                 <div class="links">
