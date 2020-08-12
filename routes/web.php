@@ -26,6 +26,7 @@ Route::post('/mhs/store', 'MahasiswaController@store');
 Route::get('/mhs/edit/{nim}', 'MahasiswaController@edit');
 Route::put('/mhs/update/{mahasiswa:nim}', 'MahasiswaController@update')->name('mhs.update');
 Route::get('/mhs/delete/{mahasiswa:nim}', 'MahasiswaController@destroy')->name('mhs.delete');
+<<<<<<< HEAD
 //Skripsi (Route Framework)
 Route::get('/skripsi', 'SkripsiController@index')->name('skripsi.index');
 Route::get('/skripsi_list', 'SkripsiController@skripsi_list')->name('skripsi_list');
@@ -34,6 +35,16 @@ Route::post('/skripsi/store', 'SkripsiController@store');
 Route::get('/skripsi/edit/{id}', 'SkripsiController@edit');
 Route::put('/skripsi/update/{skripsi:id}', 'SkripsiController@update')->name('skripsi.update');
 Route::get('/skripsi/delete/{skripsi:id}', 'SkripsiController@destroy')->name('skripsi.delete');
+=======
+//Dosen (Route Framework)
+Route::get('/dosen', 'DosenController@index')->name('dosen.index');
+Route::get('/dosen_list', 'DosenController@dosen_list')->name('dosen_list');
+Route::get('/dosen/create', 'DosenController@create');
+Route::post('/dosen/store', 'DosenController@store');
+Route::get('/dosen/edit/{kode_dosen}', 'DosenController@edit');
+Route::put('/dosen/update/{dosen:kode_dosen}', 'DosenController@update')->name('dosen.update');
+Route::get('/dosen/delete/{dosen:kode_dosen}', 'DosenController@destroy')->name('dosen.delete');
+>>>>>>> e400f70d43e1a8c5fa9763ff464982994dbbf668
 
 //Prodi (Route Framework)
 Route::get('/prodi', 'ProdiController@index')->name('Prodi.index');
