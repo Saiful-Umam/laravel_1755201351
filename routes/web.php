@@ -13,9 +13,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//  return view('welcome');
+// });
 
-Route::get('/mhs', 'MahasiswaController@index');
+Route::get('/', 'MahasiswaController@index');
+//Mahasiswa (Route dengan detail satu persatu)
+Route::get('/mhs', 'MahasiswaController@index')->name('mhs.index');
 Route::get('/mhs_list', 'MahasiswaController@mhs_list')->name('mhs_list');
+Route::get('/mhs/create', 'MahasiswaController@create');
+Route::post('/mhs/store', 'MahasiswaController@store');
+Route::get('/mhs/edit/{nim}', 'MahasiswaController@edit');
+Route::put('/mhs/update/{mahasiswa:nim}', 'MahasiswaController@update')->name('mhs.update');
+Route::get('/mhs/delete/{mahasiswa:nim}', 'MahasiswaController@destroy')->name('mhs.delete');
+//Skripsi (Route Framework)
+Route::get('/skripsi', 'SkripsiController@index')->name('skripsi.index');
+Route::get('/skripsi_list', 'SkripsiController@skripsi_list')->name('skripsi_list');
+Route::get('/skripsi/create', 'SkripsiController@create');
+Route::post('/skripsi/store', 'SkripsiController@store');
+Route::get('/skripsi/edit/{id}', 'SkripsiController@edit');
+Route::put('/skripsi/update/{skripsi:id}', 'SkripsiController@update')->name('skripsi.update');
+Route::get('/skripsi/delete/{skripsi:id}', 'SkripsiController@destroy')->name('skripsi.delete');
+
+//Prodi (Route Framework)
+Route::get('/prodi', 'ProdiController@index')->name('Prodi.index');
+Route::get('/prodi/list', 'ProdiController@prodi_list')->name('prodi.index');
+Route::get('/prodi', 'ProdiController@index');
